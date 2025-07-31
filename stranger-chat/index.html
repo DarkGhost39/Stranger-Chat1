@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" href="Stranger.png" type="image/x-icon" />
+  <!-- Basic Meta Tags -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Stranger Chat – Talk anonymously with strangers from around the world. One-on-one, anonymous, safe, and simple." />
+<meta name="keywords" content="chat with strangers, anonymous chat, omegle alternative, stranger chat, random chat, online chatting" />
+<meta name="author" content="Aryan - Arvii's Developer" />
+
+<!-- Open Graph (for sharing) -->
+<meta property="og:title" content="Stranger Chat | Anonymous 1-on-1 Chat" />
+<meta property="og:description" content="Chat anonymously with strangers. No sign-up, no profile – just pure conversation!" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://yourdomain.com" /> <!-- Update after deploy -->
+<meta property="og:image" content="https://yourdomain.com/banner.png" /> <!-- Optional image -->
+
+<!-- Mobile & Theme -->
+<meta name="theme-color" content="#111827" />
+
+  <title>Stranger Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Homepage -->
+  <div id="homepage" class="page active">
+    <div class="home-container">
+      <h1 class="title">Stranger Chat</h1>
+      <p class="subtitle">Connect with a random stranger instantly!</p>
+
+      <div class="gender-select">
+        <label><input type="radio" name="gender" value="male" checked> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+      </div>
+
+      <button id="startBtn" class="btn">Start Chat</button>
+    </div>
+  </div>
+
+  <!-- Chat Screen -->
+  <div id="chatpage" class="page">
+    <header class="chat-header">
+      <h2 id="chatTitle">Chat Room</h2>
+      <div class="chat-actions">
+        <button id="reportBtn" class="small-btn">Report</button>
+        <button id="blockBtn" class="small-btn">Block</button>
+      </div>
+    </header>
+
+    <div class="chat-window">
+      <div id="messages" class="messages"></div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="chatMessage" placeholder="Type a message...">
+      <button id="emojiBtn" class="icon-btn">😊</button>
+      <button id="sendBtn" class="btn">Send</button>
+    </div>
+  </div>
+
+  <!-- Under Maintenance Modal -->
+  <div id="maintenanceModal" class="modal">
+    <div class="modal-content">
+      <h3 id="modalText">We are under maintenance</h3>
+      <p>There is a new version coming soon. We are sorry!</p>
+      <button id="closeModal" class="btn">Close</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
